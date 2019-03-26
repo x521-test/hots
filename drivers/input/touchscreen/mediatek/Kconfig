@@ -85,16 +85,14 @@ config TOUCHSCREEN_MTK_GT9XX_HOTKNOT_PHONE
 source "drivers/input/touchscreen/mediatek/GT9XX_hotknot_phone/Kconfig"
 
 config TOUCHSCREEN_MTK_SYNAPTICS_DSX
-	tristate "Synaptics DSX I2C touchscreen"
-	depends on I2C
+	bool "SYNAPTICS_DSX for Mediatek package"
+	default n
 	help
-	  Say Y here if you have a Synaptics DSX I2C touchscreen
-	  connected to your system.
-
+	  Say Y here if you have SYNAPTICS_DSX touch panel.
 	  If unsure, say N.
 
-	  To compile this driver as a module, choose M here: the
-	  module will be called synaptics_dsx.
+	  To compile this dirver as a module, choose M here: the
+	  module will be called.
 
 source "drivers/input/touchscreen/mediatek/synaptics_dsx/Kconfig"
 
