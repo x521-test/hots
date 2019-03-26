@@ -3,9 +3,10 @@
 ccflags-y += -I$(srctree)/drivers/input/touchscreen/mediatek/synaptics_dsx/
 ccflags-y += -I$(srctree)/drivers/input/touchscreen/mediatek/
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/include/mt-plat/
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/include/mt-plat/$(MTK_PLATFORM)/include/
 
 #target
-obj-$(CONFIG_TOUCHSCREEN_MTK_SYNAPTICS_DSX_RMI_DEV) +=  synaptics_dsx_rmi_dev.o
-obj-$(CONFIG_TOUCHSCREEN_MTK_SYNAPTICS_DSX_TEST_REPORTING) +=  synaptics_dsx_test_reporting.o
-obj-$(CONFIG_TOUCHSCREEN_MTK_SYNAPTICS_DSX_I2C) +=  synaptics_dsx_i2c.o
-obj-$(CONFIG_TOUCHSCREEN_MTK_SYNAPTICS_DSX_FW_UPDATE) +=  synaptics_dsx_fw_update.o
+obj-y +=  synaptics_dsx_rmi_dev.o
+obj-y +=  synaptics_dsx_test_reporting.o
+obj-y +=  synaptics_dsx_i2c.o
+obj-y +=  synaptics_dsx_fw_update.o
