@@ -1,19 +1,10 @@
-#tuwenzan@wind-mobi.com add this at 20161108 begin
+# clean for infinix hots on 26/3/2019 by Raymondmiracle
 #
 # Synaptics DSX touchscreen driver configuration
 #
-menuconfig TOUCHSCREEN_SYNAPTICS_DSX
-	bool "Synaptics DSX touchscreen"
-	default y
-	help
-	  Say Y here if you have a Synaptics DSX I2C touchscreen
-	  connected to your system
+if TOUCHSCREEN_MTK_SYNAPTICS_DSX
 
-	  if unsure, say N.
-
-if TOUCHSCREEN_SYNAPTICS_DSX
-
-config TOUCHSCREEN_SYNAPTICS_DSX_I2C
+config TOUCHSCREEN_MTK_MTK_SYNAPTICS_DSX_I2C
 	tristate "Synaptics DSX core driver module"
 	depends on I2C
 	help
@@ -25,9 +16,9 @@ config TOUCHSCREEN_SYNAPTICS_DSX_I2C
 	  To compile this driver as a module, choose M here: the
 	  module will be called synaptics_dsx_i2c.
 
-config TOUCHSCREEN_SYNAPTICS_DSX_RMI_DEV
+config TOUCHSCREEN_MTK_MTK_SYNAPTICS_DSX_RMI_DEV
 	tristate "Synaptics DSX RMI device module"
-	depends on TOUCHSCREEN_SYNAPTICS_DSX_I2C
+	depends on TOUCHSCREEN_MTK_SYNAPTICS_DSX_I2C
 	help
 	  Say Y here to enable support for direct RMI register access.
 
@@ -36,9 +27,9 @@ config TOUCHSCREEN_SYNAPTICS_DSX_RMI_DEV
 	  To compile this driver as a module, choose M here: the
 	  module will be called synaptics_dsx_rmi_dev.
 
-config TOUCHSCREEN_SYNAPTICS_DSX_FW_UPDATE
+config TOUCHSCREEN_MTK_MTK_SYNAPTICS_DSX_FW_UPDATE
 	tristate "Synaptics DSX firmware update module"
-	depends on TOUCHSCREEN_SYNAPTICS_DSX_I2C
+	depends on TOUCHSCREEN_MTK_SYNAPTICS_DSX_I2C
 	help
 	  Say Y here to enable support for doing firmware update.
 
@@ -47,9 +38,9 @@ config TOUCHSCREEN_SYNAPTICS_DSX_FW_UPDATE
 	  To compile this driver as a module, choose M here: the
 	  module will be called synaptics_dsx_fw_update.
 
-config TOUCHSCREEN_SYNAPTICS_DSX_TEST_REPORTING
+config TOUCHSCREEN_MTK_MTK_SYNAPTICS_DSX_TEST_REPORTING
 	tristate "Synaptics DSX test reporting module"
-	depends on TOUCHSCREEN_SYNAPTICS_DSX_I2C
+	depends on TOUCHSCREEN_MTK_SYNAPTICS_DSX_I2C
 	help
 	  Say Y here to enable support for retrieving production test reports.
 
@@ -59,4 +50,3 @@ config TOUCHSCREEN_SYNAPTICS_DSX_TEST_REPORTING
 	  module will be called synaptics_dsx_test_reporting.
 
 endif
-#tuwenzan@wind-mobi.com add this at 20161108 end
