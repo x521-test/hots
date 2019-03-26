@@ -4,7 +4,7 @@
 #
 if TOUCHSCREEN_MTK_SYNAPTICS_DSX
 
-config TOUCHSCREEN_MTK_MTK_SYNAPTICS_DSX_I2C
+config TOUCHSCREEN_MTK_SYNAPTICS_DSX_I2C
 	tristate "Synaptics DSX core driver module"
 	depends on I2C
 	help
@@ -16,7 +16,7 @@ config TOUCHSCREEN_MTK_MTK_SYNAPTICS_DSX_I2C
 	  To compile this driver as a module, choose M here: the
 	  module will be called synaptics_dsx_i2c.
 
-config TOUCHSCREEN_MTK_MTK_SYNAPTICS_DSX_RMI_DEV
+config TOUCHSCREEN_MTK_SYNAPTICS_DSX_RMI_DEV
 	tristate "Synaptics DSX RMI device module"
 	depends on TOUCHSCREEN_MTK_SYNAPTICS_DSX_I2C
 	help
@@ -27,7 +27,7 @@ config TOUCHSCREEN_MTK_MTK_SYNAPTICS_DSX_RMI_DEV
 	  To compile this driver as a module, choose M here: the
 	  module will be called synaptics_dsx_rmi_dev.
 
-config TOUCHSCREEN_MTK_MTK_SYNAPTICS_DSX_FW_UPDATE
+config TOUCHSCREEN_MTK_SYNAPTICS_DSX_FW_UPDATE
 	tristate "Synaptics DSX firmware update module"
 	depends on TOUCHSCREEN_MTK_SYNAPTICS_DSX_I2C
 	help
@@ -38,7 +38,7 @@ config TOUCHSCREEN_MTK_MTK_SYNAPTICS_DSX_FW_UPDATE
 	  To compile this driver as a module, choose M here: the
 	  module will be called synaptics_dsx_fw_update.
 
-config TOUCHSCREEN_MTK_MTK_SYNAPTICS_DSX_TEST_REPORTING
+config TOUCHSCREEN_MTK_SYNAPTICS_DSX_TEST_REPORTING
 	tristate "Synaptics DSX test reporting module"
 	depends on TOUCHSCREEN_MTK_SYNAPTICS_DSX_I2C
 	help
